@@ -1,8 +1,21 @@
 #include "CameraInput.hpp"
+#include "ros/console.h"
 //#include <type_traits>
 
 CameraInput::CameraInput() : input_front(1), input_bottom(2), input_top(0)
-{}
+{
+    if (!input_front.isOpened()) {
+        ROS_INFO("Unable to open front camera...");
+    }
+
+    if (!input_bottom.isOpened()) {
+        ROS_INFO("Unable to open bottom camera...");
+    }
+
+    if (!input_top.isOpened()) {
+        ROS_INFO("Unable to open top camera...");
+    }
+}
 
 bool CameraInput::update()
 {
