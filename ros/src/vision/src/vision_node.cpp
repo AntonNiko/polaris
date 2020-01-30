@@ -8,6 +8,7 @@
 #include "ObjectDetector.hpp"
 //#include "GateDetector.hpp"
 //#include "PathDetector.hpp"
+#include "ros/console.h"
 
 // VisionSystem::EnabledDetector::NONE
 
